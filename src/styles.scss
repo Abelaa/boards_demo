@@ -13,14 +13,14 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $demo-project-primary: mat.define-palette(mat.$indigo-palette);
-$demo-project-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$demo-project-accent: mat.define-palette(mat.$orange-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $demo-project-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$demo-project-theme: mat.define-light-theme((
+$demo-project-theme: mat.define-dark-theme((
   color: (
     primary: $demo-project-primary,
     accent: $demo-project-accent,
@@ -37,3 +37,11 @@ $demo-project-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.purple { background-color: purple; }
+.yellow { background-color: yellow; color: rgba(0, 0, 0, 0.9); }
+.cyan { background-color: cyan; color: rgba(0, 0, 0, 0.9); }
+.green { background-color: green; }
+.blue { background-color: blue; }
+.red { background-color: red; }
+.gray { background-color: gray; }

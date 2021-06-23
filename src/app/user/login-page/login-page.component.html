@@ -1,0 +1,13 @@
+
+<main class="main">
+
+  <div class="login" *ngIf="!(afAuth.authState | async)">
+    <h1>Login to access Boards App</h1>
+
+    <button class="google-btn" mat-raised-button appGoogleSignin>
+      <img src="/assets/images/google.svg" class="google"/> Sign in With Google
+    </button>
+
+  </div>
+
+</main>

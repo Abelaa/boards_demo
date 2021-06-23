@@ -1,0 +1,22 @@
+
+.tasks {
+  padding: 5px 10px;
+}
+
+.inner-card {
+  margin-top: 10px;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.5;
+}
+
+.cdk-drag-animating, .cdk-drop-list-dragging .cdk-drag {
+  transition: transform 300ms ease;
+}
+
+.mini-button {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-radius: 100px;
+}

@@ -1,0 +1,27 @@
+
+.google-btn {
+  margin-bottom: 20px;
+}
+
+.google {
+  height: 18px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  & * {
+    text-align: center;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}

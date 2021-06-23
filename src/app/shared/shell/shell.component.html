@@ -1,0 +1,49 @@
+
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer fixedInViewport class="sidenav"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="false">
+
+    <mat-toolbar class="mat-toolbar">Menu</mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="/kanban" (click)="drawer.close()">Boards</a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar class="main-toolbar">
+      
+      <button type="button" mat-icon-button 
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+          <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="logo" routerLink="/">🔖 Boards</span>
+
+      <span class="fill-space"></span>
+
+      <div *ngIf="!(isHandset$ | async)">
+      </div>
+
+      <div *ngIf="afAuth.authState | async as user" class="profile">
+        <img [matMenuTriggerFor]="menu" class="avatar" src="{{ user.photoURL }}"/>  
+      </div>
+
+      <mat-menu #menu>
+        <a mat-menu-item (click)="logout()">Logout</a>
+      </mat-menu>
+
+    </mat-toolbar>
+
+    <div  class="sidenav-content">
+      <ng-content></ng-content>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

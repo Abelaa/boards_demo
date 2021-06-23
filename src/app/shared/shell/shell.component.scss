@@ -1,0 +1,58 @@
+
+.sidenav-container {
+  height: 100%;
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.sidenav {
+  width: 250px;
+  border: none;
+  box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.3);
+
+  & .mat-toolbar {
+    background: inherit;
+  }
+}
+
+.main-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.fill-space {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+i {
+  font-style: normal;
+  font-size: 15px;
+}
+
+.sidenav-content {
+  padding: 20px;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  display: inline-block;
+  width: 40px;
+  border-radius: 100px;
+  transition-duration: 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

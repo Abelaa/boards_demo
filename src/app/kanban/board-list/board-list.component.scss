@@ -1,0 +1,49 @@
+
+.boards {
+  display: flex;
+  max-width: 100vw;
+  overflow-x: auto;
+
+  & .board {
+    // flex: 1 1 200px;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  & .new-board {
+    min-width: 300px;
+    min-height: 300px;
+    border: 5px dashed gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.2;
+  border: 5px dashed gray;
+}
+
+.cdk-drag-animating, .cdk-drop-list-dragging .cdk-drag {
+  transition: transform 300ms ease;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 25px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+}
