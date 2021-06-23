@@ -8,8 +8,9 @@ const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
   { 
-    path: '', 
-    component: HomeComponent 
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
   },
   { 
     path: 'login', 
@@ -18,6 +19,10 @@ const routes: Routes = [
     path: 'kanban', 
     loadChildren: () => import('./kanban/kanban.module').then(m => m.KanbanModule), 
     ...canActivate(redirectUnauthorizedToLogin)
+  },
+  {
+    path: '**',
+    redirectTo: '/login'
   }
 ];
 
